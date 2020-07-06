@@ -1,0 +1,89 @@
+.box {
+  position: relative;
+  width: 240px;
+  height: 250px;
+  margin-bottom: 40px;
+  padding: 24px 16px 32px;
+  overflow: hidden;
+  border: 1px solid #ecedf1;
+}
+
+.box:hover {
+  > .box-i {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  > .box-strong {
+    transform: translateY(-72px);
+    transition: all 0.5s ease;
+  }
+  > .box-desc {
+    transform: translateY(-100px);
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  .box-btn-desc{
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+}
+
+.box-i {
+  position: relative;
+  top: 22px;
+  display: block;
+  color: #555;
+  font-size: 40px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.box-strong {
+  display: block;
+  margin-top: 27px;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.box-desc {
+  position: relative;
+  display: block;
+  height: 80px;
+  margin-top: 35px;
+  color: #747474;
+  line-height: 20px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.box-desc-list {
+  position: relative;
+  display: -webkit-box;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.box-btn {
+  width: 100%;
+  height: 80px;
+  margin-top: -81px;
+  text-align: center;
+}
+.box-btn-serve {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+  text-align: center;
+}
+
+.box-btn-desc{
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
