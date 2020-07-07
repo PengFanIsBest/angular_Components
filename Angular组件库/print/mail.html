@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <title></title> -->
+    <meta name="author" content="DH">
+    <meta name="author" content="http://denghao.me">
+
+    <style>
+        .wrap {
+            width: 100%;
+        }
+
+        .wrap-title {
+            width: 100%;
+            font-size: 30px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .wrap-address {
+            width: 100%;
+            font-size: 24px;
+            color: #666;
+            text-indent: 6em;
+        }
+
+        .wrap-content,
+        .wrap-signature {
+            width: 100%;
+            margin-top: 10px;
+            font-size: 24px;
+            line-height: 40px;
+            color: #666;
+            text-indent: 2em;
+        }
+
+        .wrap-date {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            color: #666;
+            font-size: 22px;
+        }
+
+        .btn {
+            display: block;
+            margin: 20px auto;
+            padding: 8px 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class='print' style='margin: 0 auto; padding: 40px; width: 600px;'>
+
+        <div class="wrap">
+            <div class='wrap-title'>
+                复退军人档案转移介绍信（存根）
+            </div>
+            <div class='wrap-date'>
+                <p>
+                    （20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;军档介第&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号
+                </p>
+            </div>
+            <div class='wrap-address'>
+                街道办事处：
+            </div>
+            <div class='wrap-content'>
+                退役军人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同志已按规定领取一次性经济补助费，按自主就业（自谋职业、复员）办理。现将本人档案转移你处，请接收并按规定管理。
+            </div>
+            <div class='wrap-signature'>
+                本人签字：
+            </div>
+            <div class='wrap-date'>
+                <p>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日</p>
+            </div>
+        </div>
+
+        <div class='wrap' style="margin-top: 80px;">
+            <div class='wrap-title'>
+                复退军人档案转移介绍信&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+        <div class='wrap-date'>
+            <p>
+                （20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;军档介第&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号
+            </p>
+        </div>
+        <div class='wrap-address'>
+            街道办事处：
+        </div>
+        <div class='wrap-content'>
+            退役军人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同志已按规定领取一次性经济补助费，按自主就业（自谋职业、复员）办理。现将本人档案转移你处，请接收并按规定管理。
+        </div>
+        <div class='wrap-signature' style='line-height: 50px;'>
+            （有效期限&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;天）
+        </div>
+        <div class='wrap-date'>
+            <p>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日</p>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <button class="btn no-print" id="btn">打印</button>
+
+    <!-- <script src="./print.js"></script> -->
+    <script src='./print.ts.js'></script>
+    <script>
+        /* https://github.com/denghao123/Print.js */
+        document.getElementById('btn').onclick = function() {
+            // Print('.print', {
+            //     onStart: function() {
+            //         console.log('onStart', new Date())
+            //     },
+            //     onEnd: function() {
+            //         console.log('onEnd', new Date())
+            //     }
+            // })
+
+            const dom = document.getElementsByClassName('print')[0];
+
+
+            const print = new Print(dom, {});
+            print.onPrint();
+            console.log(dom, print);
+        }
+    </script>
+</body>
+
+</html>
